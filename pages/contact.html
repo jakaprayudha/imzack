@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Contact Zack Prayudha for software engineering, AI, system architecture, digital products, and technology collaboration."
+    />
+
+    <meta name="author" content="Zack Prayudha, S.Kom, M.Kom" />
+
+    <title>Contact — Zack | Software Engineer</title>
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         LOADER
+         ===================================================== -->
+
+    <div id="component-loader"></div>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <div id="component-navbar"></div>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+      <!-- =================================================
+             CONTACT HERO
+             ================================================= -->
+
+      <section class="contact-page-hero">
+        <div class="container">
+          <div class="contact-hero-content fade-up">
+            <span class="section-label"> Contact </span>
+
+            <h1 class="contact-hero-title">
+              Let's Build
+
+              <span class="text-gradient"> Something Meaningful. </span>
+            </h1>
+
+            <p class="contact-hero-description">
+              Have a software problem, product idea, research opportunity, or
+              technology challenge? Let's talk about it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CONTACT MAIN
+             ================================================= -->
+
+      <section class="section contact-main-section">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- =================================================
+                         CONTACT INFORMATION
+                         ================================================= -->
+
+            <div class="contact-information fade-up">
+              <span class="section-label"> Get In Touch </span>
+
+              <h2 class="contact-information-title">
+                Let's Start
+
+                <span class="text-gradient"> a Conversation. </span>
+              </h2>
+
+              <p class="contact-information-description">
+                Whether you are looking for a software engineer, technology
+                consultant, product collaboration, or simply want to discuss an
+                interesting problem, feel free to reach out.
+              </p>
+
+              <!-- EMAIL -->
+
+              <a href="mailto:hello@imzack.id" class="contact-info-item">
+                <span class="contact-info-icon"> @ </span>
+
+                <span class="contact-info-content">
+                  <small> Email </small>
+
+                  <strong> hello@imzack.id </strong>
+                </span>
+
+                <span class="contact-info-arrow"> → </span>
+              </a>
+
+              <!-- LOCATION -->
+
+              <div class="contact-info-item">
+                <span class="contact-info-icon"> ◉ </span>
+
+                <span class="contact-info-content">
+                  <small> Location </small>
+
+                  <strong> Indonesia </strong>
+                </span>
+              </div>
+
+              <!-- AVAILABILITY -->
+
+              <div class="contact-info-item">
+                <span class="contact-info-icon"> + </span>
+
+                <span class="contact-info-content">
+                  <small> Availability </small>
+
+                  <strong> Open for selected opportunities </strong>
+                </span>
+              </div>
+
+              <!-- =================================================
+                             SOCIAL LINKS
+                             ================================================= -->
+
+              <div class="contact-social-section">
+                <span class="contact-social-label"> Connect </span>
+
+                <div class="contact-social-links">
+                  <a
+                    href="#"
+                    class="contact-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+
+                  <a
+                    href="#"
+                    class="contact-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+
+                  <a
+                    href="#"
+                    class="contact-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+
+                  <a
+                    href="#"
+                    class="contact-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    YouTube
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                         CONTACT FORM
+                         ================================================= -->
+
+            <div class="contact-form-wrapper fade-up">
+              <div class="contact-form-header">
+                <span class="contact-form-number"> 01 </span>
+
+                <div>
+                  <span class="section-label"> Send a Message </span>
+
+                  <h2>
+                    Tell Me About
+                    <span class="text-gradient"> Your Project. </span>
+                  </h2>
+                </div>
+              </div>
+
+              <form
+                class="contact-form"
+                id="contact-form"
+                data-contact-form
+                novalidate
+              >
+                <!-- NAME -->
+
+                <div class="form-group">
+                  <label for="contact-name"> Your Name </label>
+
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="John Doe"
+                    autocomplete="name"
+                    required
+                  />
+
+                  <span class="form-error" data-error="name"></span>
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                  <label for="contact-email"> Email Address </label>
+
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+
+                  <span class="form-error" data-error="email"></span>
+                </div>
+
+                <!-- SUBJECT -->
+
+                <div class="form-group">
+                  <label for="contact-subject"> Subject </label>
+
+                  <select id="contact-subject" name="subject" required>
+                    <option value="" selected disabled>Select a topic</option>
+
+                    <option value="software">Software Engineering</option>
+
+                    <option value="ai">Artificial Intelligence</option>
+
+                    <option value="architecture">System Architecture</option>
+
+                    <option value="product">Digital Product</option>
+
+                    <option value="research">Research & Collaboration</option>
+
+                    <option value="consulting">Technology Consulting</option>
+
+                    <option value="other">Other</option>
+                  </select>
+
+                  <span class="form-error" data-error="subject"></span>
+                </div>
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+                  <label for="contact-message"> Message </label>
+
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="7"
+                    placeholder="Tell me about your idea, problem, or project..."
+                    required
+                  ></textarea>
+
+                  <span class="form-error" data-error="message"></span>
+                </div>
+
+                <!-- SUBMIT -->
+
+                <button
+                  type="submit"
+                  class="btn btn-primary contact-submit-btn"
+                >
+                  <span> Send Message </span>
+
+                  <span> → </span>
+                </button>
+
+                <!-- FORM STATUS -->
+
+                <div
+                  class="contact-form-status"
+                  data-form-status
+                  role="status"
+                  aria-live="polite"
+                ></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             COLLABORATION AREAS
+             ================================================= -->
+
+      <section class="section contact-services-section section-secondary">
+        <div class="container">
+          <div class="section-header fade-up">
+            <span class="section-label"> Collaboration </span>
+
+            <h2 class="section-title">
+              What We Can
+
+              <span class="text-gradient"> Build Together. </span>
+            </h2>
+
+            <p class="section-description">
+              Areas where I can contribute technical expertise, engineering
+              experience, and product thinking.
+            </p>
+          </div>
+
+          <div class="contact-services-grid">
+            <!-- SOFTWARE -->
+
+            <article class="contact-service-card fade-up">
+              <span class="contact-service-number"> 01 </span>
+
+              <div class="contact-service-icon">&lt;/&gt;</div>
+
+              <h3>Software Engineering</h3>
+
+              <p>
+                Web applications, backend systems, APIs, integrations, and
+                scalable software platforms.
+              </p>
+            </article>
+
+            <!-- AI -->
+
+            <article class="contact-service-card fade-up">
+              <span class="contact-service-number"> 02 </span>
+
+              <div class="contact-service-icon">AI</div>
+
+              <h3>AI Engineering</h3>
+
+              <p>
+                Generative AI, LLM applications, intelligent automation,
+                predictive analytics, and AI-powered workflows.
+              </p>
+            </article>
+
+            <!-- ARCHITECTURE -->
+
+            <article class="contact-service-card fade-up">
+              <span class="contact-service-number"> 03 </span>
+
+              <div class="contact-service-icon">◈</div>
+
+              <h3>System Architecture</h3>
+
+              <p>
+                Enterprise architecture, API ecosystems, system integration, and
+                technology strategy.
+              </p>
+            </article>
+
+            <!-- PRODUCT -->
+
+            <article class="contact-service-card fade-up">
+              <span class="contact-service-number"> 04 </span>
+
+              <div class="contact-service-icon">P</div>
+
+              <h3>Digital Products</h3>
+
+              <p>
+                Product engineering from idea, requirements, architecture,
+                development, and iteration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             RESPONSE EXPECTATION
+             ================================================= -->
+
+      <section class="section contact-expectation-section">
+        <div class="container">
+          <div class="contact-expectation fade-up">
+            <div class="contact-expectation-mark">→</div>
+
+            <div>
+              <span class="section-label"> Next Step </span>
+
+              <h2>Good conversations start with a good problem.</h2>
+
+              <p>
+                Share the context, challenge, or idea. The more details you
+                provide, the easier it is to understand where technology can
+                create the most value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             FINAL CTA
+             ================================================= -->
+
+      <section class="section contact-page-cta">
+        <div class="container">
+          <div class="contact-page-cta-inner fade-up">
+            <span class="section-label"> Let's Build </span>
+
+            <h2 class="section-title">
+              Turn Problems Into
+
+              <span class="text-gradient"> Possibilities. </span>
+            </h2>
+
+            <p class="section-description">
+              Technology is most valuable when it solves something that matters.
+            </p>
+
+            <a href="#contact-form" class="btn btn-primary">
+              Start a Conversation
+
+              <span> ↑ </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <div id="component-footer"></div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../assets/js/navbar.js"></script>
+
+    <script src="../assets/js/animation.js"></script>
+
+    <script src="../assets/js/contact.js"></script>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
