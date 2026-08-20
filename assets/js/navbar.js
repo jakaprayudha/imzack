@@ -1,98 +1,157 @@
 /* =========================================================
-   ZACK PORTFOLIO
-   Navbar
+   NAVBAR
    ========================================================= */
 
 function initNavbar() {
-  const navbar = document.querySelector(".navbar");
-  const menuToggle = document.querySelector(".navbar-toggle");
-  const navMenu = document.querySelector(".navbar-menu");
-  const navLinks = document.querySelectorAll(".navbar-link");
+  const navbar = document.querySelector(".site-navbar");
 
   if (!navbar) {
     return;
   }
 
-  /* =========================
-       Sticky Navbar
-       ========================= */
+  /* =======================================================
+     RESOLVE NAVIGATION PATH
+     ======================================================= */
 
-  const handleScroll = () => {
-    if (window.scrollY > 30) {
-      navbar.classList.add("is-scrolled");
-    } else {
-      navbar.classList.remove("is-scrolled");
-    }
-  };
+  resolveNavbarPaths();
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+  /* =======================================================
+     MOBILE MENU
+     ======================================================= */
 
-  handleScroll();
+  const menuToggle = navbar.querySelector(".menu-toggle");
 
-  /* =========================
-       Mobile Menu
-       ========================= */
+  const navMenu = navbar.querySelector(".navbar-nav");
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("is-open");
+      const active = menuToggle.classList.toggle("active");
 
-      menuToggle.classList.toggle("is-active", isOpen);
+      navMenu.classList.toggle("active");
 
-      document.body.classList.toggle("menu-open", isOpen);
-
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-expanded", active ? "true" : "false");
     });
 
-    /* Close when clicking navigation */
+    /* Close menu after clicking */
 
-    navLinks.forEach((link) => {
+    navMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        navMenu.classList.remove("is-open");
-        menuToggle.classList.remove("is-active");
+        menuToggle.classList.remove("active");
 
-        document.body.classList.remove("menu-open");
+        navMenu.classList.remove("active");
 
         menuToggle.setAttribute("aria-expanded", "false");
       });
     });
-
-    /* Close when clicking outside */
-
-    document.addEventListener("click", (event) => {
-      const clickedInsideNavbar = navbar.contains(event.target);
-
-      if (!clickedInsideNavbar) {
-        navMenu.classList.remove("is-open");
-        menuToggle.classList.remove("is-active");
-
-        document.body.classList.remove("menu-open");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
   }
 
-  /* =========================
-       Active Navigation
-       ========================= */
+  /* =======================================================
+     SCROLL EFFECT
+     ======================================================= */
 
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  updateNavbarScroll();
 
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
+  window.addEventListener("scroll", updateNavbarScroll, {
+    passive: true,
+  });
 
-    if (!href) {
+  /* =======================================================
+     ACTIVE MENU
+     ======================================================= */
+
+  setActiveNavLink();
+}
+
+/* =========================================================
+   RESOLVE NAVBAR PATHS
+   ========================================================= */
+
+function resolveNavbarPaths() {
+  /*
+   * Check current location.
+   *
+   * ROOT:
+   * /index.html
+   *
+   * PAGES:
+   * /pages/about.html
+   */
+
+  const isPages = window.location.pathname.includes("/pages/");
+
+  /*
+   * Home
+   */
+
+  const homePath = isPages ? "../index.html" : "index.html";
+
+  document.querySelectorAll("[data-home-link]").forEach((link) => {
+    link.setAttribute("href", homePath);
+  });
+
+  /*
+   * Internal pages
+   */
+
+  document.querySelectorAll("[data-page]").forEach((link) => {
+    const page = link.dataset.page;
+
+    if (!page) {
       return;
     }
 
-    const linkPath = href.split("/").pop();
+    const pagePath = isPages ? `${page}.html` : `pages/${page}.html`;
 
-    if (
-      linkPath === currentPath ||
-      (currentPath === "" && linkPath === "index.html")
-    ) {
+    link.setAttribute("href", pagePath);
+  });
+
+  /*
+   * Contact
+   */
+
+  document.querySelectorAll("[data-contact-link]").forEach((link) => {
+    const contactPath = isPages ? "contact.html" : "pages/contact.html";
+
+    link.setAttribute("href", contactPath);
+  });
+}
+
+/* =========================================================
+   NAVBAR SCROLL
+   ========================================================= */
+
+function updateNavbarScroll() {
+  const navbar = document.querySelector(".site-navbar");
+
+  if (!navbar) {
+    return;
+  }
+
+  if (window.scrollY > 30) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+}
+
+/* =========================================================
+   ACTIVE NAV LINK
+   ========================================================= */
+
+function setActiveNavLink() {
+  const currentPath = window.location.pathname;
+
+  const currentFile = currentPath.split("/").pop();
+
+  document.querySelectorAll(".navbar-nav a[data-page]").forEach((link) => {
+    const page = link.dataset.page;
+
+    const targetFile = `${page}.html`;
+
+    if (currentFile === targetFile) {
       link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
   });
 }

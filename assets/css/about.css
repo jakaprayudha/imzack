@@ -1,0 +1,1271 @@
+/* =========================================================
+   ZACK PORTFOLIO
+   ABOUT PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
+.about-hero,
+.about-introduction,
+.about-professional,
+.government-section,
+.certification-section,
+.education-section,
+.about-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   ABOUT HERO
+   ========================================================= */
+
+.about-hero {
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 150px;
+  padding-bottom: 110px;
+
+  background: radial-gradient(
+    circle at 80% 35%,
+    rgba(56, 189, 248, 0.07),
+    transparent 32%
+  );
+}
+
+/* Technical background */
+
+.about-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+
+  background-size: 65px 65px;
+
+  mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+
+  pointer-events: none;
+}
+
+/* Hero grid */
+
+.about-hero-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(360px, 0.85fr);
+
+  align-items: center;
+
+  gap: 90px;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.about-hero-content {
+  max-width: 720px;
+}
+
+.about-hero-content .section-label {
+  margin-bottom: 18px;
+}
+
+.about-hero-title {
+  max-width: 780px;
+
+  margin: 0 0 28px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(3rem, 5.2vw, 5rem);
+
+  font-weight: 700;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.06em;
+}
+
+.about-hero-title .text-gradient {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 55%, #22d3ee 100%);
+
+  color: transparent;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.about-hero-description {
+  max-width: 650px;
+
+  margin: 0 0 16px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+
+  line-height: 1.85;
+}
+
+.about-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.about-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 28px;
+}
+
+/* =========================================================
+   HERO PROFILE IMAGE
+   ========================================================= */
+
+.about-hero-visual {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+
+  width: min(100%, 390px);
+
+  aspect-ratio: 4 / 5;
+}
+
+.about-image-glow {
+  position: absolute;
+
+  width: 90%;
+  height: 75%;
+
+  top: 12%;
+  left: 5%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.18),
+    transparent 68%
+  );
+
+  filter: blur(55px);
+
+  pointer-events: none;
+}
+
+.about-image-frame {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.4);
+
+  z-index: 2;
+}
+
+.about-image-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(4, 7, 11, 0.22), transparent 45%);
+
+  pointer-events: none;
+}
+
+.about-image-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center top;
+}
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.about-introduction {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.about-introduction-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.8fr)
+    minmax(0, 1.2fr);
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.about-introduction-heading {
+  position: sticky;
+
+  top: 130px;
+}
+
+.about-introduction-content {
+  max-width: 720px;
+}
+
+.about-introduction-content p {
+  margin: 0 0 22px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+
+  line-height: 1.9;
+}
+
+.about-introduction-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CLIENT STAT
+   ========================================================= */
+
+.about-client-stat {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 75px;
+
+  padding: 35px 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.045),
+    rgba(255, 255, 255, 0.015)
+  );
+}
+
+.about-client-number {
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(3rem, 6vw, 4.5rem);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.about-client-number span {
+  color: var(--color-primary);
+}
+
+.about-client-content {
+  padding-left: 30px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-client-content strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-white);
+
+  font-size: 0.95rem;
+}
+
+.about-client-content p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.78rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   PROFESSIONAL PROFILE
+   ========================================================= */
+
+.about-professional {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.professional-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 55px;
+}
+
+.professional-card {
+  position: relative;
+
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 26px;
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.professional-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 35px;
+  height: 2px;
+
+  background: var(--color-primary);
+
+  opacity: 0.5;
+}
+
+.professional-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(56, 189, 248, 0.18);
+
+  background: rgba(56, 189, 248, 0.025);
+}
+
+.professional-type {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  padding: 5px 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 999px;
+
+  color: var(--color-text-muted);
+
+  background: rgba(255, 255, 255, 0.02);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.04em;
+}
+
+.professional-card h3 {
+  margin: 0 0 8px;
+
+  padding-right: 80px;
+
+  color: var(--color-white);
+
+  font-size: 1.05rem;
+
+  line-height: 1.35;
+}
+
+.professional-card p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.76rem;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   GOVERNMENT / PROFESSIONAL ENGAGEMENT
+   ========================================================= */
+
+.government-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.government-list {
+  max-width: 1000px;
+
+  margin: 55px auto 0;
+}
+
+.government-item {
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.government-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.government-number {
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.08em;
+}
+
+.government-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.6rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+.government-item h3 {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.certification-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.certification-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  max-width: 950px;
+
+  margin: 50px auto 0;
+}
+
+.certification-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+
+  min-height: 42px;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(56, 189, 248, 0.13);
+
+  border-radius: 10px;
+
+  color: var(--color-text);
+
+  background: rgba(56, 189, 248, 0.035);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.63rem;
+
+  letter-spacing: 0.03em;
+
+  transition:
+    color var(--transition-normal),
+    border-color var(--transition-normal),
+    background var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.certification-badge:hover {
+  color: var(--color-primary);
+
+  border-color: rgba(56, 189, 248, 0.3);
+
+  background: rgba(56, 189, 248, 0.07);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-section {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.education-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(280px, 0.75fr)
+    minmax(0, 1.25fr);
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.education-heading {
+  position: sticky;
+
+  top: 130px;
+}
+
+.education-list {
+  position: relative;
+}
+
+.education-list::before {
+  content: "";
+
+  position: absolute;
+
+  top: 15px;
+  bottom: 15px;
+
+  left: 5px;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 189, 248, 0.3),
+    rgba(56, 189, 248, 0.04)
+  );
+}
+
+.education-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 30px;
+
+  padding: 0 0 55px 35px;
+}
+
+.education-item:last-child {
+  padding-bottom: 0;
+}
+
+.education-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 6px;
+  left: 0;
+
+  width: 11px;
+  height: 11px;
+
+  border: 2px solid var(--color-primary);
+
+  border-radius: 50%;
+
+  background: var(--color-bg);
+}
+
+.education-year {
+  color: var(--color-primary);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  line-height: 1.5;
+}
+
+.education-content h3 {
+  margin: 0 0 8px;
+
+  color: var(--color-white);
+
+  font-size: 1.05rem;
+
+  line-height: 1.4;
+}
+
+.education-content p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.8rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.about-cta {
+  padding-top: 90px;
+  padding-bottom: 120px;
+}
+
+.about-cta-inner {
+  position: relative;
+
+  max-width: 1000px;
+
+  min-height: 380px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-inline: auto;
+
+  padding: 65px 40px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border: 1px solid rgba(56, 189, 248, 0.15);
+
+  border-radius: 26px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.05),
+    rgba(129, 140, 248, 0.02)
+  );
+}
+
+.about-cta-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.09),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.about-cta-inner::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+
+  mask-image: linear-gradient(to bottom, black, transparent);
+
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+
+  pointer-events: none;
+}
+
+.about-cta-inner > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+.about-cta .section-title {
+  max-width: 760px;
+
+  margin-bottom: 18px;
+
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+}
+
+.about-cta .section-description {
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1200px
+   --------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .about-hero-grid {
+    gap: 65px;
+  }
+
+  .about-introduction-grid,
+  .education-layout {
+    gap: 70px;
+  }
+}
+
+/* ---------------------------------------------------------
+   1000px
+   --------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .about-hero {
+    min-height: auto;
+
+    padding-top: 135px;
+    padding-bottom: 90px;
+  }
+
+  .about-hero-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, 0.8fr);
+
+    gap: 45px;
+  }
+
+  .about-hero-title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+  }
+
+  .professional-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-introduction-grid,
+  .education-layout {
+    gap: 50px;
+  }
+}
+
+/* ---------------------------------------------------------
+   768px
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* HERO */
+
+  .about-hero {
+    padding-top: 115px;
+    padding-bottom: 80px;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    text-align: center;
+  }
+
+  .about-hero-content {
+    max-width: 680px;
+
+    margin-inline: auto;
+  }
+
+  .about-hero-title {
+    max-width: 650px;
+
+    margin-inline: auto;
+
+    font-size: clamp(2.5rem, 8vw, 3.7rem);
+  }
+
+  .about-hero-description {
+    margin-inline: auto;
+  }
+
+  .about-hero-actions {
+    justify-content: center;
+  }
+
+  .about-social {
+    justify-content: center;
+  }
+
+  .about-hero-visual {
+    max-width: 360px;
+
+    width: 100%;
+
+    margin-inline: auto;
+  }
+
+  /* INTRO */
+
+  .about-introduction {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .about-introduction-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .about-introduction-heading {
+    position: static;
+  }
+
+  .about-client-stat {
+    margin-top: 55px;
+  }
+
+  /* PROFESSIONAL */
+
+  .about-professional {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .professional-grid {
+    margin-top: 40px;
+  }
+
+  /* GOVERNMENT */
+
+  .government-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .government-list {
+    margin-top: 40px;
+  }
+
+  /* CERTIFICATIONS */
+
+  .certification-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* EDUCATION */
+
+  .education-section {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .education-layout {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .education-heading {
+    position: static;
+  }
+
+  /* CTA */
+
+  .about-cta {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+
+/* ---------------------------------------------------------
+   600px
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  /* HERO */
+
+  .about-hero {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+
+  .about-hero-grid {
+    gap: 50px;
+  }
+
+  .about-hero-title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+
+    letter-spacing: -0.05em;
+  }
+
+  .about-hero-description {
+    font-size: 0.88rem;
+
+    line-height: 1.75;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    max-width: 290px;
+
+    margin-inline: auto;
+  }
+
+  .about-hero-actions .btn {
+    width: 100%;
+  }
+
+  .about-hero-visual {
+    max-width: 300px;
+  }
+
+  .about-image-frame {
+    border-radius: 22px;
+  }
+
+  /* INTRO */
+
+  .about-introduction {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .about-introduction-content p {
+    font-size: 0.88rem;
+
+    line-height: 1.8;
+  }
+
+  /* CLIENT */
+
+  .about-client-stat {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-top: 45px;
+
+    padding: 27px;
+  }
+
+  .about-client-number {
+    font-size: 3.2rem;
+  }
+
+  .about-client-content {
+    width: 100%;
+
+    padding-left: 0;
+    padding-top: 18px;
+
+    border-left: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* PROFESSIONAL */
+
+  .about-professional {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .professional-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 35px;
+  }
+
+  .professional-card {
+    min-height: 165px;
+
+    padding: 23px;
+  }
+
+  .professional-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .professional-card p {
+    font-size: 0.73rem;
+  }
+
+  /* GOVERNMENT */
+
+  .government-section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .government-item {
+    grid-template-columns: 40px 1fr;
+
+    gap: 12px;
+
+    padding: 21px 0;
+  }
+
+  .government-item h3 {
+    font-size: 0.88rem;
+  }
+
+  /* CERTIFICATIONS */
+
+  .certification-section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .certification-list {
+    gap: 7px;
+
+    margin-top: 35px;
+  }
+
+  .certification-badge {
+    min-width: 62px;
+
+    min-height: 38px;
+
+    padding: 7px 10px;
+
+    font-size: 0.56rem;
+  }
+
+  /* EDUCATION */
+
+  .education-section {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+
+  .education-layout {
+    gap: 35px;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    padding: 0 0 40px 28px;
+  }
+
+  .education-year {
+    font-size: 0.58rem;
+  }
+
+  .education-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .education-content p {
+    font-size: 0.75rem;
+  }
+
+  /* CTA */
+
+  .about-cta {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .about-cta-inner {
+    min-height: 340px;
+
+    padding: 50px 20px;
+
+    border-radius: 20px;
+  }
+
+  .about-cta .section-title {
+    font-size: 2rem;
+  }
+
+  .about-cta .section-description {
+    font-size: 0.82rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   400px
+   --------------------------------------------------------- */
+
+@media (max-width: 400px) {
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .about-hero-description {
+    font-size: 0.82rem;
+  }
+
+  .about-hero-visual {
+    max-width: 265px;
+  }
+
+  .about-client-number {
+    font-size: 2.8rem;
+  }
+
+  .professional-card {
+    min-height: 150px;
+  }
+
+  .professional-type {
+    font-size: 0.47rem;
+  }
+
+  .government-item h3 {
+    font-size: 0.82rem;
+  }
+
+  .about-cta .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .professional-card,
+  .certification-badge {
+    transition: none;
+  }
+}

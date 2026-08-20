@@ -6,18 +6,56 @@
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("Zack Portfolio initializing...");
 
-  // Load HTML components first
-  await loadComponents();
+  /*
+   * Detect current page location
+   *
+   * index.html
+   *      → ./components/
+   *
+   * pages/about.html
+   *      → ../components/
+   */
 
-  // Initialize application
-  initNavbar();
-  initAnimations();
-  initCounters();
-  initProjects();
-  initProjectFilter();
-  initContactForm();
+  const BASE_PATH = window.location.pathname.includes("/pages/") ? "../" : "";
 
-  // Utility
+  /* =====================================================
+       LOAD COMPONENTS FIRST
+       ===================================================== */
+
+  await loadComponents(BASE_PATH);
+
+  /* =====================================================
+       INITIALIZE APPLICATION
+       ===================================================== */
+
+  if (typeof initNavbar === "function") {
+    initNavbar();
+  }
+
+  if (typeof initAnimations === "function") {
+    initAnimations();
+  }
+
+  if (typeof initCounters === "function") {
+    initCounters();
+  }
+
+  if (typeof initProjects === "function") {
+    initProjects();
+  }
+
+  if (typeof initProjectFilter === "function") {
+    initProjectFilter();
+  }
+
+  if (typeof initContactForm === "function") {
+    initContactForm();
+  }
+
+  /* =====================================================
+       CURRENT YEAR
+       ===================================================== */
+
   initCurrentYear();
 
   console.log("Zack Portfolio initialized.");
@@ -27,26 +65,30 @@ document.addEventListener("DOMContentLoaded", async () => {
    COMPONENT LOADER
    ========================================================= */
 
-async function loadComponents() {
+async function loadComponents(BASE_PATH) {
   const components = {
-    "component-loader": "components/loader.html",
+    "component-loader": `${BASE_PATH}components/loader.html`,
 
-    "component-navbar": "components/navbar.html",
+    "component-navbar": `${BASE_PATH}components/navbar.html`,
 
-    "component-footer": "components/footer.html",
+    "component-footer": `${BASE_PATH}components/footer.html`,
   };
 
-  for (const [id, path] of Object.entries(components)) {
-    const container = document.getElementById(id);
+  /*
+   * Load main components
+   */
+
+  for (const [elementId, componentPath] of Object.entries(components)) {
+    const container = document.getElementById(elementId);
 
     if (!container) {
-      console.warn(`Component container #${id} tidak ditemukan.`);
+      console.warn(`Container #${elementId} tidak ditemukan.`);
 
       continue;
     }
 
     try {
-      const response = await fetch(path);
+      const response = await fetch(componentPath);
 
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
@@ -56,21 +98,25 @@ async function loadComponents() {
 
       container.innerHTML = html;
 
-      console.log(`Component loaded: ${path}`);
+      console.log(`✓ Component loaded: ${componentPath}`);
     } catch (error) {
-      console.error(`Failed loading component: ${path}`, error);
+      console.error(`✕ Failed loading component: ${componentPath}`, error);
     }
   }
 
-  // Load social links
-  await loadSocialLinks();
+  /*
+   * Load social links AFTER
+   * navbar/footer/components exist
+   */
+
+  await loadSocialLinks(BASE_PATH);
 }
 
 /* =========================================================
    SOCIAL LINKS
    ========================================================= */
 
-async function loadSocialLinks() {
+async function loadSocialLinks(BASE_PATH) {
   const containers = document.querySelectorAll("[data-social-links]");
 
   if (!containers.length) {
@@ -78,7 +124,7 @@ async function loadSocialLinks() {
   }
 
   try {
-    const response = await fetch("components/social-links.html");
+    const response = await fetch(`${BASE_PATH}components/social-links.html`);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
@@ -90,9 +136,9 @@ async function loadSocialLinks() {
       container.innerHTML = html;
     });
 
-    console.log("Component loaded: social-links.html");
+    console.log("✓ Social links loaded");
   } catch (error) {
-    console.error("Failed loading social-links.html", error);
+    console.error("✕ Failed loading social-links.html", error);
   }
 }
 
