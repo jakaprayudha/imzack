@@ -1,6 +1,5 @@
 /* =========================================================
-   ZACK PORTFOLIO
-   Project Filter
+   PROJECT FILTER
    ========================================================= */
 
 function initProjectFilter() {
@@ -14,69 +13,62 @@ function initProjectFilter() {
 
   const buttons = filterContainer.querySelectorAll("[data-filter]");
 
-  if (!buttons.length) {
-    return;
-  }
+  const projects = projectContainer.querySelectorAll("[data-category]");
 
-  /* =========================
-       Filter Function
-       ========================= */
-
-  const applyFilter = (category) => {
-    const cards = projectContainer.querySelectorAll("[data-project-id]");
-
-    cards.forEach((card) => {
-      const cardCategory = card.dataset.category;
-
-      const shouldShow = category === "all" || cardCategory === category;
-
-      if (shouldShow) {
-        card.hidden = false;
-
-        requestAnimationFrame(() => {
-          card.classList.add("is-visible");
-        });
-      } else {
-        card.hidden = true;
-
-        card.classList.remove("is-visible");
-      }
-    });
-  };
-
-  /* =========================
-       Button Events
-       ========================= */
+  const emptyState = document.querySelector("[data-projects-empty]");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const category = button.dataset.filter;
+      const filter = button.dataset.filter;
 
-      buttons.forEach((item) => {
-        item.classList.remove("active");
+      /* Active button */
+
+      buttons.forEach((btn) => {
+        btn.classList.remove("active");
       });
 
       button.classList.add("active");
 
-      applyFilter(category);
+      let visibleCount = 0;
+
+      /* Filter projects */
+
+      projects.forEach((project) => {
+        const categories = (project.dataset.category || "")
+          .toLowerCase()
+          .split(" ");
+
+        const show =
+          filter === "all" || categories.includes(filter.toLowerCase());
+
+        if (show) {
+          project.style.display = "";
+
+          visibleCount++;
+
+          requestAnimationFrame(() => {
+            project.classList.remove("filter-hidden");
+          });
+        } else {
+          project.classList.add("filter-hidden");
+
+          setTimeout(() => {
+            if (project.classList.contains("filter-hidden")) {
+              project.style.display = "none";
+            }
+          }, 200);
+        }
+      });
+
+      /* Empty state */
+
+      if (emptyState) {
+        if (visibleCount === 0) {
+          emptyState.style.display = "block";
+        } else {
+          emptyState.style.display = "none";
+        }
+      }
     });
   });
-
-  /* =========================
-       Default Filter
-       ========================= */
-
-  const activeButton = filterContainer.querySelector('[data-filter="all"]');
-
-  if (activeButton) {
-    activeButton.classList.add("active");
-  }
-
-  document.addEventListener(
-    "projectsLoaded",
-    () => {
-      applyFilter("all");
-    },
-    { once: true },
-  );
 }
