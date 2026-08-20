@@ -1,0 +1,421 @@
+/* =========================================================
+   ZACK PORTFOLIO
+   404 ERROR PAGE
+   ========================================================= */
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.error-page {
+  position: relative;
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding-top: 120px;
+
+  padding-bottom: 100px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.error-page::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(to bottom, black, transparent);
+
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.error-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+
+  height: 700px;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.065),
+    transparent 68%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.error-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ERROR CODE
+   ========================================================= */
+
+.error-code-wrapper {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-bottom: 20px;
+}
+
+.error-code {
+  color: rgba(255, 255, 255, 0.08);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(7rem, 18vw, 13rem);
+
+  font-weight: 800;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+
+  user-select: none;
+}
+
+.error-code-line {
+  width: 65px;
+
+  height: 1px;
+
+  background: rgba(56, 189, 248, 0.35);
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.error-title {
+  margin: 17px 0 18px;
+
+  color: var(--color-white);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.3rem, 5vw, 4rem);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.055em;
+}
+
+.error-description {
+  max-width: 580px;
+
+  margin: 0 auto;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.85;
+}
+
+/* =========================================================
+   TERMINAL
+   ========================================================= */
+
+.error-terminal {
+  max-width: 620px;
+
+  margin: 35px auto 30px;
+
+  overflow: hidden;
+
+  text-align: left;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  background: rgba(4, 9, 15, 0.72);
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+}
+
+.terminal-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 10px 13px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.terminal-title {
+  margin-left: 8px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.48rem;
+}
+
+.terminal-body {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding: 18px;
+}
+
+.terminal-line {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.53rem;
+
+  line-height: 1.5;
+}
+
+.terminal-prompt {
+  margin-right: 7px;
+
+  color: var(--color-primary);
+}
+
+.terminal-muted {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.terminal-error {
+  color: rgba(248, 113, 113, 0.8);
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.error-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 10px;
+}
+
+.error-actions .btn {
+  min-width: 145px;
+}
+
+/* =========================================================
+   QUICK LINKS
+   ========================================================= */
+
+.error-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 35px;
+}
+
+.error-links > span {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.48rem;
+}
+
+.error-links a {
+  color: var(--color-text-muted);
+
+  text-decoration: none;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.48rem;
+
+  transition: color var(--transition-normal);
+}
+
+.error-links a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .error-page {
+    min-height: calc(100vh - 70px);
+
+    padding-top: 100px;
+
+    padding-bottom: 70px;
+  }
+
+  .error-code {
+    font-size: clamp(6rem, 25vw, 9rem);
+  }
+
+  .error-code-line {
+    width: 40px;
+  }
+
+  .error-title {
+    font-size: 2.25rem;
+  }
+
+  .error-description {
+    max-width: 500px;
+
+    font-size: 0.75rem;
+  }
+
+  .error-terminal {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .error-page {
+    padding-top: 90px;
+
+    padding-bottom: 60px;
+  }
+
+  .error-code-wrapper {
+    gap: 12px;
+  }
+
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-code-line {
+    display: none;
+  }
+
+  .error-title {
+    font-size: 2rem;
+  }
+
+  .error-description {
+    padding-inline: 10px;
+  }
+
+  .error-terminal {
+    margin-top: 25px;
+
+    border-radius: 9px;
+  }
+
+  .terminal-body {
+    padding: 14px;
+  }
+
+  .terminal-line {
+    font-size: 0.46rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+
+    max-width: 260px;
+  }
+
+  .error-links {
+    gap: 10px;
+
+    padding-inline: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .error-actions .btn,
+  .error-links a {
+    transition: none;
+  }
+}

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta
+      name="description"
+      content="Page not found — Zack Software Engineer"
+    />
+
+    <title>404 — Page Not Found | Zack</title>
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="assets/css/variables.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/components.css" />
+
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- =====================================================
+         404 CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="assets/css/404.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         LOADER
+         ===================================================== -->
+
+    <div id="component-loader"></div>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <div id="component-navbar"></div>
+
+    <!-- =====================================================
+         404 CONTENT
+         ===================================================== -->
+
+    <main class="error-page">
+      <div class="container">
+        <div class="error-content fade-up">
+          <!-- ERROR CODE -->
+
+          <div class="error-code-wrapper">
+            <span class="error-code"> 404 </span>
+
+            <span class="error-code-line"></span>
+          </div>
+
+          <!-- LABEL -->
+
+          <span class="section-label"> System Response </span>
+
+          <!-- TITLE -->
+
+          <h1 class="error-title">
+            Page
+
+            <span class="text-gradient"> Not Found. </span>
+          </h1>
+
+          <!-- DESCRIPTION -->
+
+          <p class="error-description">
+            The page you are looking for does not exist, has been moved, or the
+            URL may be incorrect.
+          </p>
+
+          <!-- TECHNICAL MESSAGE -->
+
+          <div class="error-terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+
+              <span class="terminal-title"> system.log </span>
+            </div>
+
+            <div class="terminal-body">
+              <span class="terminal-line">
+                <span class="terminal-prompt"> $ </span>
+
+                locate requested_resource
+              </span>
+
+              <span class="terminal-line terminal-muted">
+                Searching system...
+              </span>
+
+              <span class="terminal-line terminal-error">
+                Resource not found.
+              </span>
+
+              <span class="terminal-line">
+                <span class="terminal-prompt"> $ </span>
+
+                redirect --home
+              </span>
+            </div>
+          </div>
+
+          <!-- ACTIONS -->
+
+          <div class="error-actions">
+            <a href="index.html" class="btn btn-primary">
+              Back to Home
+
+              <span> → </span>
+            </a>
+
+            <button
+              type="button"
+              class="btn btn-outline"
+              onclick="history.back()"
+            >
+              Go Back
+            </button>
+          </div>
+
+          <!-- QUICK LINKS -->
+
+          <div class="error-links">
+            <span> Explore </span>
+
+            <a href="pages/about.html"> About </a>
+
+            <a href="pages/expertise.html"> Expertise </a>
+
+            <a href="pages/projects.html"> Projects </a>
+
+            <a href="pages/products.html"> Products </a>
+
+            <a href="pages/research.html"> Research </a>
+
+            <a href="pages/articles.html"> Journal </a>
+
+            <a href="pages/contact.html"> Contact </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <div id="component-footer"></div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="assets/js/navbar.js"></script>
+
+    <script src="assets/js/animation.js"></script>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
