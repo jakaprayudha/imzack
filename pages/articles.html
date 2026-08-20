@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Engineering articles, technical notes, research, and experiments by Zack Prayudha."
+    />
+
+    <meta name="author" content="Zack Prayudha, S.Kom, M.Kom" />
+
+    <title>Articles — Zack | Software Engineer</title>
+
+    <!-- =====================================================
+         GLOBAL CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/variables.css" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <link rel="stylesheet" href="../assets/css/components.css" />
+
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+    <!-- =====================================================
+         PAGE CSS
+         ===================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/articles.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         LOADER
+         ===================================================== -->
+
+    <div id="component-loader"></div>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <div id="component-navbar"></div>
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+      <!-- =================================================
+             ARTICLES HERO
+             ================================================= -->
+
+      <section class="articles-page-hero">
+        <div class="container">
+          <div class="articles-hero-content fade-up">
+            <span class="section-label"> Engineering Journal </span>
+
+            <h1 class="articles-hero-title">
+              Think.
+
+              <span class="text-gradient"> Build. </span>
+
+              Share.
+            </h1>
+
+            <p class="articles-hero-description">
+              Technical notes, research, experiments, engineering insights, and
+              lessons learned from building software and intelligent systems.
+            </p>
+
+            <div class="articles-hero-meta">
+              <span> Software Engineering </span>
+
+              <span> Artificial Intelligence </span>
+
+              <span> System Architecture </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             FEATURED ARTICLE
+             ================================================= -->
+
+      <section class="section featured-article-section">
+        <div class="container">
+          <div class="section-header fade-up">
+            <span class="section-label"> Featured Article </span>
+
+            <h2 class="section-title">
+              Ideas Behind the
+
+              <span class="text-gradient"> Systems. </span>
+            </h2>
+          </div>
+
+          <article class="featured-article fade-up">
+            <div class="featured-article-visual">
+              <div class="article-visual-grid">
+                <span> DATA </span>
+
+                <span> AI </span>
+
+                <span> MODEL </span>
+
+                <span> INSIGHT </span>
+              </div>
+
+              <div class="article-visual-center">EDA</div>
+            </div>
+
+            <div class="featured-article-content">
+              <div class="article-meta">
+                <span class="article-category"> AI & DATA </span>
+
+                <span> Featured </span>
+              </div>
+
+              <h3>
+                Exploratory Data Analysis: Understanding Data Before Building
+                Intelligence
+              </h3>
+
+              <p>
+                Data analysis should begin with understanding the data itself.
+                Exploratory Data Analysis provides a systematic approach to
+                discovering patterns, anomalies, relationships, and quality
+                issues before moving toward statistical or machine learning
+                models.
+              </p>
+
+              <div class="article-tags">
+                <span> EDA </span>
+
+                <span> Data Analysis </span>
+
+                <span> Visualization </span>
+
+                <span> AI </span>
+              </div>
+
+              <a href="article-detail.html?article=eda" class="btn btn-primary">
+                Read Article
+
+                <span> → </span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================
+             ARTICLE FILTER
+             ================================================= -->
+
+      <section
+        class="section articles-list-section section-secondary"
+        id="articles"
+      >
+        <div class="container">
+          <div class="articles-toolbar fade-up">
+            <div>
+              <span class="section-label"> Latest Writing </span>
+
+              <h2 class="section-title">Engineering Notes.</h2>
+            </div>
+
+            <div class="article-filters" data-article-filters>
+              <button
+                type="button"
+                class="article-filter active"
+                data-filter="all"
+              >
+                All
+              </button>
+
+              <button type="button" class="article-filter" data-filter="ai">
+                AI
+              </button>
+
+              <button
+                type="button"
+                class="article-filter"
+                data-filter="architecture"
+              >
+                Architecture
+              </button>
+
+              <button
+                type="button"
+                class="article-filter"
+                data-filter="healthcare"
+              >
+                Healthcare
+              </button>
+
+              <button
+                type="button"
+                class="article-filter"
+                data-filter="engineering"
+              >
+                Engineering
+              </button>
+            </div>
+          </div>
+
+          <!-- =================================================
+                     ARTICLE GRID
+                     ================================================= -->
+
+          <div class="articles-grid" data-articles>
+            <!-- =================================================
+                         ARTICLE 01
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="ai">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 01 </span>
+
+                <span class="article-card-code"> AI / DATA </span>
+
+                <div class="article-card-symbol">EDA</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> AI </span>
+
+                  <span> Data </span>
+                </div>
+
+                <h3>Exploratory Data Analysis</h3>
+
+                <p>
+                  Understanding data before building intelligence and machine
+                  learning systems.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 8 min read </span>
+
+                  <a
+                    href="article-detail.html?article=eda"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                         ARTICLE 02
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="architecture">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 02 </span>
+
+                <span class="article-card-code"> SYSTEM / ARCH </span>
+
+                <div class="article-card-symbol">◈</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> Architecture </span>
+
+                  <span> Enterprise </span>
+                </div>
+
+                <h3>Designing Enterprise Systems</h3>
+
+                <p>
+                  From business requirements to scalable architecture,
+                  integrations, APIs, and reliable digital platforms.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 10 min read </span>
+
+                  <a
+                    href="article-detail.html?article=enterprise-architecture"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                         ARTICLE 03
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="healthcare">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 03 </span>
+
+                <span class="article-card-code"> HEALTH / AI </span>
+
+                <div class="article-card-symbol">+</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> Healthcare </span>
+
+                  <span> AI </span>
+                </div>
+
+                <h3>Building Digital Healthcare</h3>
+
+                <p>
+                  Engineering digital healthcare systems for complex clinical,
+                  operational, and administrative workflows.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 9 min read </span>
+
+                  <a
+                    href="article-detail.html?article=digital-healthcare"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                         ARTICLE 04
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="ai">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 04 </span>
+
+                <span class="article-card-code"> AI / LLM </span>
+
+                <div class="article-card-symbol">AI</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> AI </span>
+
+                  <span> LLM </span>
+                </div>
+
+                <h3>From Chatbots to Intelligent Enterprise Systems</h3>
+
+                <p>
+                  Exploring how large language models can become components
+                  inside real-world enterprise workflows.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 7 min read </span>
+
+                  <a
+                    href="article-detail.html?article=enterprise-ai"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                         ARTICLE 05
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="engineering">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 05 </span>
+
+                <span class="article-card-code"> SOFTWARE / API </span>
+
+                <div class="article-card-symbol">&lt;/&gt;</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> Engineering </span>
+
+                  <span> API </span>
+                </div>
+
+                <h3>Building Maintainable Software</h3>
+
+                <p>
+                  Principles for designing software that remains understandable,
+                  testable, maintainable, and scalable.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 6 min read </span>
+
+                  <a
+                    href="article-detail.html?article=maintainable-software"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                         ARTICLE 06
+                         ================================================= -->
+
+            <article class="article-card fade-up" data-category="engineering">
+              <div class="article-card-visual">
+                <span class="article-card-index"> 06 </span>
+
+                <span class="article-card-code"> IOT / SYSTEM </span>
+
+                <div class="article-card-symbol">IoT</div>
+              </div>
+
+              <div class="article-card-content">
+                <div class="article-meta">
+                  <span> Engineering </span>
+
+                  <span> IoT </span>
+                </div>
+
+                <h3>Designing IoT Monitoring Systems</h3>
+
+                <p>
+                  Connecting sensors, devices, data pipelines, monitoring
+                  dashboards, and intelligent alert systems.
+                </p>
+
+                <div class="article-card-footer">
+                  <span class="article-reading-time"> 8 min read </span>
+
+                  <a
+                    href="article-detail.html?article=iot-monitoring"
+                    class="project-link"
+                  >
+                    Read →
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="articles-empty" data-articles-empty>
+            <span> No articles found in this category. </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             WRITING PHILOSOPHY
+             ================================================= -->
+
+      <section class="section writing-philosophy-section">
+        <div class="container">
+          <div class="writing-philosophy-layout">
+            <div class="writing-philosophy-heading fade-up">
+              <span class="section-label"> Why I Write </span>
+
+              <h2 class="section-title">
+                Build It.
+
+                <br />
+
+                <span class="text-gradient"> Understand It. </span>
+
+                Share It.
+              </h2>
+            </div>
+
+            <div class="writing-philosophy-content fade-up">
+              <p>
+                Engineering is not only about producing working software. It is
+                also about understanding why a system works, where it fails, and
+                how it can become better.
+              </p>
+
+              <p>
+                Writing helps turn implementation experience into reusable
+                knowledge — from architectural decisions and technical
+                experiments to lessons learned from real-world systems.
+              </p>
+
+              <div class="writing-principles">
+                <div>
+                  <span> 01 </span>
+
+                  <strong> Understand </strong>
+                </div>
+
+                <div>
+                  <span> 02 </span>
+
+                  <strong> Experiment </strong>
+                </div>
+
+                <div>
+                  <span> 03 </span>
+
+                  <strong> Build </strong>
+                </div>
+
+                <div>
+                  <span> 04 </span>
+
+                  <strong> Share </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================
+             CTA
+             ================================================= -->
+
+      <section class="section articles-page-cta">
+        <div class="container">
+          <div class="articles-page-cta-inner fade-up">
+            <span class="section-label"> Engineering Journal </span>
+
+            <h2 class="section-title">
+              Have an Idea Worth
+
+              <span class="text-gradient"> Discussing? </span>
+            </h2>
+
+            <p class="section-description">
+              Research, technical discussions, engineering ideas, and technology
+              experiments are always welcome.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+              Start a Conversation
+
+              <span> → </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <div id="component-footer"></div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../assets/js/navbar.js"></script>
+
+    <script src="../assets/js/animation.js"></script>
+
+    <script src="../assets/js/app.js"></script>
+
+    <!-- =====================================================
+         ARTICLE FILTER
+         ===================================================== -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filterContainer = document.querySelector(
+          "[data-article-filters]",
+        );
+
+        const articles = document.querySelectorAll(
+          "[data-articles] .article-card",
+        );
+
+        const emptyState = document.querySelector("[data-articles-empty]");
+
+        if (!filterContainer || !articles.length) {
+          return;
+        }
+
+        const buttons = filterContainer.querySelectorAll("[data-filter]");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+
+            buttons.forEach((item) => {
+              item.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            let visibleCount = 0;
+
+            articles.forEach((article) => {
+              const category = article.dataset.category;
+
+              const show = filter === "all" || category === filter;
+
+              if (show) {
+                article.style.display = "";
+
+                visibleCount++;
+              } else {
+                article.style.display = "none";
+              }
+            });
+
+            if (emptyState) {
+              emptyState.style.display = visibleCount === 0 ? "flex" : "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
