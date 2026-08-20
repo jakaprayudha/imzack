@@ -1,52 +1,30 @@
-<!-- =========================================================
-     ZACK PORTFOLIO
-     Navbar Component
-     ========================================================= -->
-
-<header class="navbar" id="navbar">
+<nav class="site-navbar">
   <div class="container navbar-container">
-    <!-- Logo -->
-    <a href="index.html" class="navbar-logo" aria-label="Zack Portfolio Home">
-      <span class="navbar-logo-mark">&lt;/&gt;</span>
-      <span class="navbar-logo-text"> ZACK<span>.</span> </span>
-    </a>
+    <a href="index.html" class="navbar-logo"> Zack<span>.</span> </a>
 
-    <!-- Mobile Toggle -->
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/expertise.html">Expertise</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="pages/products.html">Products</a>
+      <a href="pages/research.html">Research</a>
+      <a href="pages/articles.html">Journal</a>
+    </div>
+
+    <div class="navbar-actions">
+      <a href="pages/contact.html" class="btn btn-primary"> Contact </a>
+    </div>
+
     <button
+      class="menu-toggle"
       type="button"
-      class="navbar-toggle"
       aria-label="Toggle navigation"
       aria-expanded="false"
-      aria-controls="primary-navigation"
     >
       <span></span>
       <span></span>
       <span></span>
     </button>
-
-    <!-- Navigation -->
-    <nav
-      class="navbar-menu"
-      id="primary-navigation"
-      aria-label="Primary Navigation"
-    >
-      <a href="index.html" class="navbar-link"> Home </a>
-
-      <a href="pages/about.html" class="navbar-link"> About </a>
-
-      <a href="pages/expertise.html" class="navbar-link"> Expertise </a>
-
-      <a href="pages/projects.html" class="navbar-link"> Projects </a>
-
-      <a href="pages/products.html" class="navbar-link"> Products </a>
-
-      <a href="pages/research.html" class="navbar-link"> Research </a>
-
-      <a href="pages/articles.html" class="navbar-link"> Articles </a>
-
-      <a href="pages/contact.html" class="navbar-link navbar-link-contact">
-        Contact
-      </a>
-    </nav>
   </div>
-</header>
+</nav>
