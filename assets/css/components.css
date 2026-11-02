@@ -246,3 +246,47 @@
 
   border-color: var(--color-primary-hover);
 }
+
+/* =========================================================
+   IMAGE SKELETON LOADER
+   Shimmer placeholder while images load (stacked on mobile)
+   ========================================================= */
+
+.img-skeleton {
+  background: linear-gradient(
+    100deg,
+    var(--color-bg-tertiary) 38%,
+    #233248 50%,
+    var(--color-bg-tertiary) 62%
+  );
+
+  background-size: 200% 100%;
+
+  animation: img-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.img-skeleton img {
+  opacity: 0;
+}
+
+img.img-loaded {
+  opacity: 1;
+
+  transition: opacity var(--transition-normal);
+}
+
+@keyframes img-skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-skeleton {
+    animation: none;
+  }
+}
